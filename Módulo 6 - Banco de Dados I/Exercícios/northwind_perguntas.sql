@@ -12,13 +12,49 @@ ROUND( SUM((products.unit_price * order_details.quantity * (1 - order_details.di
 
 Obtenha uma tabela que contenha o id do pedido e o valor total do mesmo.
 
-SELECT orders.order_id, SUM((products.unit_price * order_details.quantity * (1- order_details.discount) + AVG(orders.freight)) AS valor_total,
-FROM orders, order_details, products,
+SELECT orders.order_id, SUM((products.unit_price * order_details.quantity * (1- order_details.discount) + AVG(orders.freight)) AS total_amount
+FROM orders, order_details, products
 GROUP BY 1;	
+							
+							
+SELECT orders.order_id,
+SUM((orders.freight)+(products.unit_price * order_details.quantity)-(products.unit_price * order_details.quantity * order_details.discount)) AS valor_total
+FROM orders
+INNER JOIN order_details ON orders.order_id = order_details.order_id
+INNER JOIN products ON order_details.product_id = products.product_id
+GROUP BY 1
+ORDER BY order_id ASC;							
 	
 Obtenha uma lista dos 10 clientes que realizaram o maior número de pedidos, bem como o número de pedidos de cada, ordenados em ordem decrescente de nº de pedidos.
 
+							
+SELECT unit_price from products;
+SELECT quantity from order_details; 
+SELECT discount from order_details;
+SELECT freight FROM orders;
+SELECT order_id	FROM orders;						
 
+SELECT * FROM order_details
+ORDER BY order_id ASC; 		
+							
+SELECT * FROM order_details
+WHERE order_id = 10266;							
+364.8 - 18.24= 346.56
+							
+SELECT * FROM orders
+WHERE order_id = 10266;							
+frete 25.73							
+	
+346.56 + 25.73= 372.29							
+							
+							
+SELECT products.unit_price, order_details.quantity, order_details.discount, orders.freight
+FROM products, order_details, orders;
+							
+							
+							
+							
+							
 
 Obtenha uma tabela que contenha o id e o valor total do pedido e o nome do cliente que o realizou.
 
