@@ -193,8 +193,12 @@ SELECT * FROM departamento
 SELECT * FROM funcionario
 SELECT * FROM trabalha
 
-SELECT * FROM projeto  
-WHERE id_depto = 1 
+SELECT pr.nomeproj, f.nomefunc
+FROM projeto AS pr
+INNER JOIN funcionario AS f 
+ON f.id_depto = pr.id_depto
+WHERE nomefunc = 'Frank T. Santos'
+
 
 5. Selecione o nome dos empregados que trabalham em projetos controlados pelo departamento de
 nome ‘ Construção’.
@@ -229,24 +233,33 @@ SELECT * FROM projeto --- id_proj = 30
 SELECT * FROM trabalha 
 SELECT * FROM funcionario
 
-SELECT nomefunc
-FROM funcionario AS f
-INNER JOIN projeto AS pr ON f.id_depto = pr.id_depto
-INNER JOIN trabalha AS tr ON tr.id_proj = pr. id_proj
-WHERE (pr.id_depto = 1) OR (pr.id_proj = 30) 
 
-	
-Como selecionar Alice pela tabela?
+SELECT pr.nomeproj, f.nomefunc
+FROM projeto AS pr
+INNER JOIN funcionario AS f 
+ON f.id_depto = pr.id_depto
+WHERE pr.nomeproj = 'N. Benefícios'
+AND f.id_depto = 1	
 
 
 9. Selecione o nome dos empregados que trabalham em algum projeto controlado pelo
 departamento cujo gerente é o empregado de nome ‘Frank T. Santos’.
 
-
+SELECT DISTINCT f.nomefunc
+FROM projeto AS pr
+INNER JOIN funcionario AS f 
+ON f.id_depto = pr.id_depto
+WHERE f.id_depto = 1
+AND f.nomefunc != 'Frank T. Santos';
 
 10. Selecione o nome dos empregados que trabalham em todos os projetos controlados pelo
 departamento cujo gerente é o empregado de nome ‘Frank T. Santos’.
 
-
+SELECT DISTINCT f.nomefunc
+FROM projeto AS pr
+INNER JOIN funcionario AS f 
+ON f.id_depto = pr.id_depto
+WHERE f.id_depto = 1
+AND f.nomefunc != 'Frank T. Santos';
 
 
