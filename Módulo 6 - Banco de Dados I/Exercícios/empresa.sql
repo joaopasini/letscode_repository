@@ -250,7 +250,7 @@ FROM projeto AS pr
 INNER JOIN funcionario AS f 
 ON f.id_depto = pr.id_depto
 WHERE f.id_depto = 1
-AND f.nomefunc != 'Frank T. Santos';
+AND f.nomefunc <> 'Frank T. Santos';
 
 10. Selecione o nome dos empregados que trabalham em todos os projetos controlados pelo
 departamento cujo gerente é o empregado de nome ‘Frank T. Santos’.
