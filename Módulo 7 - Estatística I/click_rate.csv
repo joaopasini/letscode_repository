@@ -1,7 +1,3 @@
-Headline;Click;Rate
-Headline A;Click;14
-Headline A;No-click;986
-Headline B;Click;8
-Headline B;No-click;992
-Headline C;Click;12
-Headline C;No-click;988
+version https://git-lfs.github.com/spec/v1
+oid sha256:9098c1f58c66a0729f4391620b464b7db001fb00f41dc3b7151b0fbee49e34fd
+size 158
