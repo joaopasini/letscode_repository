@@ -1,0 +1,744 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Row</th>
+      <th>Description</th>
+      <th>Special</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SK_ID_CURR</td>
+      <td>ID of loan in our sample</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TARGET</td>
+      <td>Target variable (1 - client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 - all other cases)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NAME_CONTRACT_TYPE</td>
+      <td>Identification if loan is cash or revolving</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CODE_GENDER</td>
+      <td>Gender of the client</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FLAG_OWN_CAR</td>
+      <td>Flag if the client owns a car</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FLAG_OWN_REALTY</td>
+      <td>Flag if client owns a house or flat</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>CNT_CHILDREN</td>
+      <td>Number of children the client has</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>AMT_INCOME_TOTAL</td>
+      <td>Income of the client</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>AMT_CREDIT</td>
+      <td>Credit amount of the loan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>AMT_ANNUITY</td>
+      <td>Loan annuity</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>AMT_GOODS_PRICE</td>
+      <td>For consumer loans it is the price of the goods for which the loan is given</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NAME_TYPE_SUITE</td>
+      <td>Who was accompanying client when he was applying for the loan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>NAME_INCOME_TYPE</td>
+      <td>Clients income type (businessman, working, maternity leave,)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>NAME_EDUCATION_TYPE</td>
+      <td>Level of highest education the client achieved</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>NAME_FAMILY_STATUS</td>
+      <td>Family status of the client</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>NAME_HOUSING_TYPE</td>
+      <td>What is the housing situation of the client (renting, living with parents, ...)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>REGION_POPULATION_RELATIVE</td>
+      <td>Normalized population of region where client lives (higher number means the client lives in more populated region)</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>DAYS_BIRTH</td>
+      <td>Client's age in days at the time of application</td>
+      <td>time only relative to the application</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>DAYS_EMPLOYED</td>
+      <td>How many days before the application the person started current employment</td>
+      <td>time only relative to the application</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>DAYS_REGISTRATION</td>
+      <td>How many days before the application did client change his registration</td>
+      <td>time only relative to the application</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>DAYS_ID_PUBLISH</td>
+      <td>How many days before the application did client change the identity document with which he applied for the loan</td>
+      <td>time only relative to the application</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>OWN_CAR_AGE</td>
+      <td>Age of client's car</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>FLAG_MOBIL</td>
+      <td>Did client provide mobile phone (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>FLAG_EMP_PHONE</td>
+      <td>Did client provide work phone (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>FLAG_WORK_PHONE</td>
+      <td>Did client provide home phone (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>FLAG_CONT_MOBILE</td>
+      <td>Was mobile phone reachable (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>FLAG_PHONE</td>
+      <td>Did client provide home phone (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>FLAG_EMAIL</td>
+      <td>Did client provide email (1=YES, 0=NO)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>OCCUPATION_TYPE</td>
+      <td>What kind of occupation does the client have</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>CNT_FAM_MEMBERS</td>
+      <td>How many family members does client have</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>REGION_RATING_CLIENT</td>
+      <td>Our rating of the region where client lives (1,2,3)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>REGION_RATING_CLIENT_W_CITY</td>
+      <td>Our rating of the region where client lives with taking city into account (1,2,3)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>WEEKDAY_APPR_PROCESS_START</td>
+      <td>On which day of the week did the client apply for the loan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>HOUR_APPR_PROCESS_START</td>
+      <td>Approximately at what hour did the client apply for the loan</td>
+      <td>rounded</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>REG_REGION_NOT_LIVE_REGION</td>
+      <td>Flag if client's permanent address does not match contact address (1=different, 0=same, at region level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>REG_REGION_NOT_WORK_REGION</td>
+      <td>Flag if client's permanent address does not match work address (1=different, 0=same, at region level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>LIVE_REGION_NOT_WORK_REGION</td>
+      <td>Flag if client's contact address does not match work address (1=different, 0=same, at region level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>REG_CITY_NOT_LIVE_CITY</td>
+      <td>Flag if client's permanent address does not match contact address (1=different, 0=same, at city level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>REG_CITY_NOT_WORK_CITY</td>
+      <td>Flag if client's permanent address does not match work address (1=different, 0=same, at city level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>LIVE_CITY_NOT_WORK_CITY</td>
+      <td>Flag if client's contact address does not match work address (1=different, 0=same, at city level)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>ORGANIZATION_TYPE</td>
+      <td>Type of organization where client works</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>EXT_SOURCE_1</td>
+      <td>Normalized score from external data source</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>EXT_SOURCE_2</td>
+      <td>Normalized score from external data source</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>EXT_SOURCE_3</td>
+      <td>Normalized score from external data source</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>APARTMENTS_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>BASEMENTAREA_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>YEARS_BEGINEXPLUATATION_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>YEARS_BUILD_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>COMMONAREA_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>ELEVATORS_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>ENTRANCES_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>FLOORSMAX_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>FLOORSMIN_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>LANDAREA_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>LIVINGAPARTMENTS_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>LIVINGAREA_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>NONLIVINGAPARTMENTS_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>NONLIVINGAREA_AVG</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>APARTMENTS_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>BASEMENTAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>YEARS_BEGINEXPLUATATION_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>YEARS_BUILD_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>COMMONAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>ELEVATORS_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>ENTRANCES_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>FLOORSMAX_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>FLOORSMIN_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>LANDAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>LIVINGAPARTMENTS_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>LIVINGAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>NONLIVINGAPARTMENTS_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>NONLIVINGAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>APARTMENTS_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>BASEMENTAREA_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>YEARS_BEGINEXPLUATATION_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>YEARS_BUILD_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>COMMONAREA_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>ELEVATORS_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>ENTRANCES_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>FLOORSMAX_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>FLOORSMIN_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>LANDAREA_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>LIVINGAPARTMENTS_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>LIVINGAREA_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>NONLIVINGAPARTMENTS_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>NONLIVINGAREA_MEDI</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>FONDKAPREMONT_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>HOUSETYPE_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>TOTALAREA_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>WALLSMATERIAL_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>EMERGENCYSTATE_MODE</td>
+      <td>Normalized information about building where the client lives, What is average (_AVG suffix), modus (_MODE suffix), median (_MEDI suffix) apartment size, common area, living area, age of building, number of elevators, number of entrances, state of the building, number of floor</td>
+      <td>normalized</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>OBS_30_CNT_SOCIAL_CIRCLE</td>
+      <td>How many observation of client's social surroundings with observable 30 DPD (days past due) default</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>DEF_30_CNT_SOCIAL_CIRCLE</td>
+      <td>How many observation of client's social surroundings defaulted on 30 DPD (days past due)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>OBS_60_CNT_SOCIAL_CIRCLE</td>
+      <td>How many observation of client's social surroundings with observable 60 DPD (days past due) default</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>DEF_60_CNT_SOCIAL_CIRCLE</td>
+      <td>How many observation of client's social surroundings defaulted on 60 (days past due) DPD</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>DAYS_LAST_PHONE_CHANGE</td>
+      <td>How many days before application did client change phone</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>FLAG_DOCUMENT_2</td>
+      <td>Did client provide document 2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>FLAG_DOCUMENT_3</td>
+      <td>Did client provide document 3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>FLAG_DOCUMENT_4</td>
+      <td>Did client provide document 4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>FLAG_DOCUMENT_5</td>
+      <td>Did client provide document 5</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>FLAG_DOCUMENT_6</td>
+      <td>Did client provide document 6</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>FLAG_DOCUMENT_7</td>
+      <td>Did client provide document 7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>FLAG_DOCUMENT_8</td>
+      <td>Did client provide document 8</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>FLAG_DOCUMENT_9</td>
+      <td>Did client provide document 9</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>FLAG_DOCUMENT_10</td>
+      <td>Did client provide document 10</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>FLAG_DOCUMENT_11</td>
+      <td>Did client provide document 11</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>FLAG_DOCUMENT_12</td>
+      <td>Did client provide document 12</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>FLAG_DOCUMENT_13</td>
+      <td>Did client provide document 13</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>FLAG_DOCUMENT_14</td>
+      <td>Did client provide document 14</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>FLAG_DOCUMENT_15</td>
+      <td>Did client provide document 15</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>FLAG_DOCUMENT_16</td>
+      <td>Did client provide document 16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>FLAG_DOCUMENT_17</td>
+      <td>Did client provide document 17</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>FLAG_DOCUMENT_18</td>
+      <td>Did client provide document 18</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>FLAG_DOCUMENT_19</td>
+      <td>Did client provide document 19</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>FLAG_DOCUMENT_20</td>
+      <td>Did client provide document 20</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>FLAG_DOCUMENT_21</td>
+      <td>Did client provide document 21</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>AMT_REQ_CREDIT_BUREAU_HOUR</td>
+      <td>Number of enquiries to Credit Bureau about the client one hour before application</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>AMT_REQ_CREDIT_BUREAU_DAY</td>
+      <td>Number of enquiries to Credit Bureau about the client one day before application (excluding one hour before application)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>AMT_REQ_CREDIT_BUREAU_WEEK</td>
+      <td>Number of enquiries to Credit Bureau about the client one week before application (excluding one day before application)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>AMT_REQ_CREDIT_BUREAU_MON</td>
+      <td>Number of enquiries to Credit Bureau about the client one month before application (excluding one week before application)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>AMT_REQ_CREDIT_BUREAU_QRT</td>
+      <td>Number of enquiries to Credit Bureau about the client 3 month before application (excluding one month before application)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>AMT_REQ_CREDIT_BUREAU_YEAR</td>
+      <td>Number of enquiries to Credit Bureau about the client one day year (excluding last 3 months before application)</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
