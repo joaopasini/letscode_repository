@@ -6,7 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Escrevendo um título
-st.title('Streamlit Example')
+st.title('Streamlit Example 2')
 
 # Escrevendo um texto
 st.write('Este é um texto')
